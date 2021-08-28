@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+    let n = prompt('Nhập số lượng phần tử vào đây');
+        n = parseInt(n);
+    for (let i = 0; i < n;i++) {
+        let x = prompt('Nhập phần tử cần cho vào mảng ở vị trí ' + i);
+            x = parseInt(x);
+        num[i] = x;
+    }
+
+    let a = prompt('Nhập số tùy ý vào đây');
+        a = parseInt(a);
+    let index = 0;
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] === a ) {
+            index++;
+        }
+    }
+    document.write('Vậy có ' + index + ' phần tử ' + a + ' trong hàm')
+</script>
+</body>
+</html>

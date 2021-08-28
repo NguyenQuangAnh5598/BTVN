@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+
+    function getElement() {
+        let n = prompt('Nhập số lượng phần tử vào đây');
+        n = parseInt(n);
+        for (let i = 0; i < n; i++) {
+            let x = prompt('Nhập phần tử cần cho vào mảng ở vị trí ' + i);
+            x = parseInt(x);
+            num[i] = x;
+        }
+    }
+
+    function totalPrime() {
+        let total = 0;
+        for (let i = 0; i < num.length; i++) {
+            if (checkprime(num[i])) {
+                total += num[i];
+            }
+        }
+        document.write('Tổng của các số nguyên trong mảng là' + total);
+    }
+
+    function checkprime(n) {
+        if (n < 2) return false;
+        else {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    getElement();
+    totalPrime();
+
+
+   // let num = getElement()
+    //     for (let i = 0; i < num.length; i++) {
+    //         if (num[i] < 2) return false;
+    //         else {
+    //             for (let j = 2; j <= Math.sqrt(num[i]); j++) {
+    //                 if (num[i] % j === 0) {
+    //                     return false;
+    //                 }
+    //             }
+    //         }
+    //         return true;
+    //     }
+    // function totalPrime() {
+    // let sum = 0;
+    // if (checkPrime()) {
+    //     sum += num[i];
+    // }
+    // return(sum);
+    // }
+    //
+    //     let sum = 0;
+    //     for (let i=0; i < num.length; i++) {
+    //
+    //         sum += num[i];
+    //     }
+    //     document.write('Tổng các số nguyên trong mảng là ' + sum);
+</script>
+
+</body>
+</html>
